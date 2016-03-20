@@ -1,0 +1,12 @@
+box: ruby:2.2.4
+
+build:
+    steps:
+        - bundle-install
+        - script:
+            name: rspec
+            code: bundle exec rspec
+
+        # TODO:
+        #    - run contracts
+        #    - deploy to Heroku

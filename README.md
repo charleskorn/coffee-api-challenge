@@ -1,3 +1,21 @@
+# coffee-api-challenge
+A coffee API that conforms to a set of [contract tests](http://martinfowler.com/bliki/IntegrationContractTest.html).
+
+May not produce actual coffee.
+
+## Prerequisites
+
+* Docker (eg. [Docker Machine](https://docs.docker.com/machine/) or boot2docker)
+* [Wercker](http://wercker.com/) CLI (installation instructions: http://wercker.com/cli/install/)
+
+It's also possible to run everything using a local installation of Ruby, but I'd recommend you use Wercker, 
+as it will ensure that your environment matches the one I used and the one used for the CI build.
+
+## Running the tests (including contract tests)
+
+* Run `./go.sh test` to run the tests
+
+# Original challenge description
 ### The Challenge
 Create an API that passes the PACTO contract tests in this repository.
 
