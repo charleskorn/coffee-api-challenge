@@ -3,6 +3,8 @@ A coffee API that conforms to a set of [contract tests](http://martinfowler.com/
 
 May not produce actual coffee.
 
+CI build status: [![wercker status](https://app.wercker.com/status/cad80d4a332e3c78cfa2abfbf7609aaa/s "wercker status")](https://app.wercker.com/project/bykey/cad80d4a332e3c78cfa2abfbf7609aaa)
+
 ## Prerequisites
 
 * Docker (eg. [Docker Machine](https://docs.docker.com/machine/) or boot2docker)
