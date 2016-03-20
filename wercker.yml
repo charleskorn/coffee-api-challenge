@@ -1,5 +1,12 @@
 box: ruby:2.2.4
 
+dev:
+    steps:
+        - bundle-install
+        - internal/watch:
+            code: bundle exec rspec
+            reload: true
+
 build:
     steps:
         - bundle-install
