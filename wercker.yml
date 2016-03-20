@@ -4,18 +4,22 @@ dev:
     steps:
         - bundle-install
         - internal/watch:
-            code: bundle exec rspec
+            code: bundle exec rake
             reload: true
 
 build:
     steps:
         - bundle-install
-        - script:
-            name: rspec
-            code: bundle exec rspec
 
-        # TODO:
-        #    - run contracts
+        - script:
+            name: show environment info
+            code: |
+                ruby --version
+                bundle --version
+
+        - script:
+            name: lint and test
+            code: bundle exec rake
 
 deploy:
     steps:

@@ -10,6 +10,5 @@ gem 'json'
 gem 'sinatra'
 gem 'thin'
 gem 'rack'
-
-# fix transitive dependencies that have new version which break pacto
-gem 'json-schema', '~> 2.2.3'
+gem 'json-schema'
+gem 'rubocop'
