@@ -6,6 +6,9 @@ May not produce actual coffee.
 [CI build](https://app.wercker.com/#applications/56ee6ca3573ac62617280e68) status:
 [![wercker status](https://app.wercker.com/status/cad80d4a332e3c78cfa2abfbf7609aaa/s "wercker status")](https://app.wercker.com/project/bykey/cad80d4a332e3c78cfa2abfbf7609aaa)
 
+[Deployed version](https://coffee-api-challenge.herokuapp.com/) - note that this runs on a free Heroku instance and so won't be
+available for 8 hours every day
+
 ## Prerequisites
 
 * Docker (eg. [Docker Machine](https://docs.docker.com/machine/) or boot2docker)
