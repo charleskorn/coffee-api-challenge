@@ -3,7 +3,8 @@ A coffee API that conforms to a set of [contract tests](http://martinfowler.com/
 
 May not produce actual coffee.
 
-CI build status: [![wercker status](https://app.wercker.com/status/cad80d4a332e3c78cfa2abfbf7609aaa/s "wercker status")](https://app.wercker.com/project/bykey/cad80d4a332e3c78cfa2abfbf7609aaa)
+[CI build](https://app.wercker.com/#applications/56ee6ca3573ac62617280e68) status:
+[![wercker status](https://app.wercker.com/status/cad80d4a332e3c78cfa2abfbf7609aaa/s "wercker status")](https://app.wercker.com/project/bykey/cad80d4a332e3c78cfa2abfbf7609aaa)
 
 ## Prerequisites
 
@@ -15,7 +16,7 @@ as it will ensure that your environment matches the one I used and the one used 
 
 ## Running the tests (including contract tests)
 
-* Run `./go.sh test` to run the tests
+* Run `./go.sh` to run the tests
 
 # Original challenge description
 ### The Challenge
