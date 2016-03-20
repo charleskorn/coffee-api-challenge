@@ -1,2 +1,2 @@
-require './bin/coffee-server'
+require './lib/http'
 run Sinatra::Application
