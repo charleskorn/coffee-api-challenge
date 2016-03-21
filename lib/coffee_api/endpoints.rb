@@ -15,3 +15,10 @@ get '/menu' do
   content_type :json
   response.to_json
 end
+
+get '/order/:id' do
+  response = handler.handle_get_order_status
+
+  content_type :json
+  response.to_json
+end

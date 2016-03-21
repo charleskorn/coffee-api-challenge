@@ -8,7 +8,7 @@ describe 'Smoke test: HTTP endpoints' do
       get '/'
 
       expect(last_response).to be_ok
-      expect(last_response.body).to match('Welcome to the super-cool coffee API!')
+      expect(last_response.body).to eq('Welcome to the super-cool coffee API!')
     end
   end
 
@@ -20,6 +20,17 @@ describe 'Smoke test: HTTP endpoints' do
 
       response_object = JSON.parse(last_response.body)
       expect(response_object['coffees'].length).to be > 0
+    end
+  end
+
+  context 'GET /order/:id' do
+    it 'returns the order status' do
+      get '/order/123'
+
+      expect(last_response).to be_ok
+
+      response_object = JSON.parse(last_response.body)
+      expect(response_object['status']).to eq('READY')
     end
   end
 end

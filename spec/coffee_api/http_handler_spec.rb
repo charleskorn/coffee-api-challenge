@@ -27,4 +27,15 @@ describe CoffeeAPI::HTTPHandler do
       expect(response).to eq(expected)
     end
   end
+
+  describe '#handle_get_order_status' do
+    it 'returns the status of the order' do
+      response = subject.handle_get_order_status
+      expected = {
+        status: 'READY'
+      }
+
+      expect(response).to eq(expected)
+    end
+  end
 end

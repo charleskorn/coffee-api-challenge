@@ -18,6 +18,12 @@ module CoffeeAPI
       }
     end
 
+    def handle_get_order_status
+      {
+        status: 'READY'
+      }
+    end
+
     private
 
     def generate_order_path(name)
