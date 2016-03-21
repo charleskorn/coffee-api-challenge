@@ -1,3 +1,4 @@
+require 'spec_helper'
 require 'coffee_menu'
 
 describe CoffeeMenu do
@@ -7,15 +8,11 @@ describe CoffeeMenu do
     end
 
     it 'has names for each of the coffees' do
-      subject.menu_items.each do |menu_item|
-        expect(menu_item).to have_key(:name)
-      end
+      expect(subject.menu_items).to each_have_key(:name)
     end
 
     it 'has prices for each of the coffees' do
-      subject.menu_items.each do |menu_item|
-        expect(menu_item).to have_key(:price)
-      end
+      expect(subject.menu_items).to each_have_key(:price)
     end
   end
 end
