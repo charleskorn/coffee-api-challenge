@@ -35,7 +35,7 @@ describe 'Smoke test: HTTP endpoints' do
   end
 
   context 'POST /order/:name' do
-    it 'returns to the details of the order' do
+    it 'returns the details of the order' do
       post '/order/a-coffee'
 
       expect(last_response).to be_created
