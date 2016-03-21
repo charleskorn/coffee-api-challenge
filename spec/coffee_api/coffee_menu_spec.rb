@@ -1,7 +1,7 @@
 require 'spec_helper'
-require 'coffee_menu'
+require 'coffee_api/coffee_menu'
 
-describe CoffeeMenu do
+describe CoffeeAPI::CoffeeMenu do
   describe '#menu_items' do
     it 'returns a list of at least four coffees' do
       expect(subject.menu_items.length).to be >= 4

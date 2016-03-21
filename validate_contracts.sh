@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
-PORT=9000
+PORT=4567
 PID_FILE=contracts_server.pid
 
 bundle exec rackup config.ru -p $PORT -P $PID_FILE &
