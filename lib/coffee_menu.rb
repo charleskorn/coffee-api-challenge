@@ -1,5 +1,10 @@
 class CoffeeMenu
   def menu_items
-    [nil, nil, nil, nil]
+    item = {
+      name: 'Coffee',
+      price: 4
+    }
+
+    [item, item, item, item]
   end
 end
