@@ -4,7 +4,7 @@ require 'json'
 require 'coffee_api'
 
 get '/' do
-  'Hello world!'
+  'Welcome to the super-cool coffee API!'
 end
 
 get '/menu' do

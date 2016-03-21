@@ -8,7 +8,7 @@ describe 'HTTP interface' do
       get '/'
 
       expect(last_response).to be_ok
-      expect(last_response.body).to match('Hello world')
+      expect(last_response.body).to match('Welcome to the super-cool coffee API!')
     end
   end
 
