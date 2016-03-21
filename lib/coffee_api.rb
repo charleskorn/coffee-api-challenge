@@ -1,2 +1,2 @@
 require 'coffee_api/coffee_menu'
-require 'coffee_api/http'
+require 'coffee_api/endpoints'

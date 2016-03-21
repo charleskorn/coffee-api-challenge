@@ -1,7 +1,7 @@
 require 'rspec'
 require 'rack/test'
 
-require 'coffee_api/http'
+require 'coffee_api/endpoints'
 require 'test_helpers/each_have_key'
 
 module RSpecRackTestMixin
