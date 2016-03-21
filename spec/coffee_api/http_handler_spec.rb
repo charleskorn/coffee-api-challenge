@@ -38,4 +38,16 @@ describe CoffeeAPI::HTTPHandler do
       expect(response).to eq(expected)
     end
   end
+
+  describe '#handle_post_order' do
+    it 'returns the details of the order' do
+      response = subject.handle_post_order
+      expected = {
+        order: '/order/123',
+        wait_time: 5
+      }
+
+      expect(response).to eq(expected)
+    end
+  end
 end

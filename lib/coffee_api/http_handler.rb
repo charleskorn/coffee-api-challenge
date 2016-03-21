@@ -24,6 +24,13 @@ module CoffeeAPI
       }
     end
 
+    def handle_post_order
+      {
+        order: '/order/123',
+        wait_time: 5
+      }
+    end
+
     private
 
     def generate_order_path(name)

@@ -33,4 +33,16 @@ describe 'Smoke test: HTTP endpoints' do
       expect(response_object['status']).to eq('READY')
     end
   end
+
+  context 'POST /order/:name' do
+    it 'returns to the details of the order' do
+      post '/order/a-coffee'
+
+      expect(last_response).to be_created
+
+      response_object = JSON.parse(last_response.body)
+      expect(response_object['order']).to match(%r{/order/\d+})
+      expect(response_object['wait_time']).to be >= 0
+    end
+  end
 end
