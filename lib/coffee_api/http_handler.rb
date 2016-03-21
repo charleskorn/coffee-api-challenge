@@ -1,3 +1,5 @@
+require 'coffee_api/coffee_menu'
+
 module CoffeeAPI
   class HTTPHandler
     def self.create
