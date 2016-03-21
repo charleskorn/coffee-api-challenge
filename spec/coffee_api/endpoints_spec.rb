@@ -2,7 +2,7 @@ require 'json'
 
 require 'spec_helper'
 
-describe 'HTTP interface' do
+describe 'Smoke test: HTTP endpoints' do
   context 'GET /' do
     it 'returns a hello response' do
       get '/'

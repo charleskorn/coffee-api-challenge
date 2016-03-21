@@ -1,6 +1,6 @@
 module CoffeeAPI
   class CoffeeMenu
-    def menu_items
+    def coffees
       item = {
         name: 'Coffee',
         price: 4,
