@@ -1,13 +1,15 @@
 require 'coffee_api/coffee_menu'
+require 'coffee_api/order_repository'
 
 module CoffeeAPI
   class HTTPHandler
     def self.create
-      new(CoffeeMenu.new)
+      new(CoffeeMenu.new, OrderRepository.new)
     end
 
-    def initialize(menu)
+    def initialize(menu, order_store)
       @menu = menu
+      @order_store = order_store
     end
 
     def handle_get_menu
@@ -18,9 +20,9 @@ module CoffeeAPI
       }
     end
 
-    def handle_get_order_status
+    def handle_get_order_status(order_id)
       {
-        status: 'READY'
+        status: @order_store.retrieve_order_status(order_id)
       }
     end
 

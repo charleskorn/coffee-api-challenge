@@ -17,7 +17,7 @@ get '/menu' do
 end
 
 get '/order/:id' do
-  response = handler.handle_get_order_status
+  response = handler.handle_get_order_status(params['id'])
 
   content_type :json
   body response.to_json

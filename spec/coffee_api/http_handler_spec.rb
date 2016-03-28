@@ -1,9 +1,11 @@
 require 'spec_helper'
 require 'coffee_api/http_handler'
+require 'coffee_api/order_repository'
 
 describe CoffeeAPI::HTTPHandler do
   let(:menu) { instance_double(CoffeeAPI::CoffeeMenu) }
-  subject { CoffeeAPI::HTTPHandler.new(menu) }
+  let(:order_repository) { instance_double(CoffeeAPI::OrderRepository) }
+  subject { CoffeeAPI::HTTPHandler.new(menu, order_repository) }
 
   describe '#handle_get_menu' do
     it 'returns a list of coffees, each with an ordering URL' do
@@ -30,9 +32,14 @@ describe CoffeeAPI::HTTPHandler do
 
   describe '#handle_get_order_status' do
     it 'returns the status of the order' do
-      response = subject.handle_get_order_status
+      order_id = '1234'
+      status = 'the order status'
+
+      allow(order_repository).to receive(:retrieve_order_status).with(order_id).and_return(status)
+
+      response = subject.handle_get_order_status(order_id)
       expected = {
-        status: 'READY'
+        status: status
       }
 
       expect(response).to eq(expected)
