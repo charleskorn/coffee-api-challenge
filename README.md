@@ -1,7 +1,6 @@
 # coffee-api-challenge
-A coffee API that conforms to a set of [contract tests](http://martinfowler.com/bliki/IntegrationContractTest.html).
-
-May not produce actual coffee.
+The only coffee store where the coffee is always ready, even if you didn't place an order beforehand.
+But at least it confirms to the [contract tests](http://martinfowler.com/bliki/IntegrationContractTest.html).
 
 [CI build](https://app.wercker.com/#applications/56ee6ca3573ac62617280e68) status:
 [![wercker status](https://app.wercker.com/status/cad80d4a332e3c78cfa2abfbf7609aaa/s "wercker status")](https://app.wercker.com/project/bykey/cad80d4a332e3c78cfa2abfbf7609aaa)
