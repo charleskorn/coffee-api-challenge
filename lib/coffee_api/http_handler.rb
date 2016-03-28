@@ -21,15 +21,20 @@ module CoffeeAPI
     end
 
     def handle_get_order_status(order_id)
+      order_status = @order_store.retrieve_order_status(order_id)
+
       {
-        status: @order_store.retrieve_order_status(order_id)
+        status: order_status
       }
     end
 
-    def handle_post_order
+    def handle_post_order(coffee_name)
+      coffee_id = @order_store.create_order(coffee_name)
+      wait_time = @order_store.retrieve_order_wait_time(coffee_id)
+
       {
-        order: '/order/123',
-        wait_time: 5
+        order: "/order/#{coffee_id}",
+        wait_time: wait_time
       }
     end
 

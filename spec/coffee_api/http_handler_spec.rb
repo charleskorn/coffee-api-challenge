@@ -48,10 +48,17 @@ describe CoffeeAPI::HTTPHandler do
 
   describe '#handle_post_order' do
     it 'returns the details of the order' do
-      response = subject.handle_post_order
+      coffee_name = 'Best Coffee Ever'
+      order_id = 123
+      wait_time = 456
+
+      expect(order_repository).to receive(:create_order).with(coffee_name).and_return(order_id)
+      allow(order_repository).to receive(:retrieve_order_wait_time).with(order_id).and_return(wait_time)
+
+      response = subject.handle_post_order(coffee_name)
       expected = {
-        order: '/order/123',
-        wait_time: 5
+        order: "/order/#{order_id}",
+        wait_time: wait_time
       }
 
       expect(response).to eq(expected)

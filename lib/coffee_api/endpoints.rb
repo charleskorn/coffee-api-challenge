@@ -24,7 +24,7 @@ get '/order/:id' do
 end
 
 post '/order/:name' do
-  response = handler.handle_post_order
+  response = handler.handle_post_order(params['name'])
 
   content_type :json
   status 201
