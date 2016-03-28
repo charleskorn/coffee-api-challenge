@@ -13,7 +13,7 @@ module CoffeeAPI
     end
 
     def handle_get_menu
-      coffees = @menu.coffees.map { |c| c.merge(order_path: generate_order_path(c[:name])) }
+      coffees = @menu.coffees.map { |c| generate_coffee_info(c) }
 
       {
         coffees: coffees
@@ -39,6 +39,10 @@ module CoffeeAPI
     end
 
     private
+
+    def generate_coffee_info(coffee)
+      coffee.merge(order_path: generate_order_path(coffee[:name]))
+    end
 
     def generate_order_path(name)
       '/order/' + generate_slug(name)
